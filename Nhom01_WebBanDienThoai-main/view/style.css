@@ -1,0 +1,116 @@
+.container{
+    margin-bottom: 80px;
+
+}
+.bg-color{
+    background-color: none;
+}
+.bg-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.col-md-5{
+    color: white;
+    
+}
+.button-color{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+.see-all-margin{
+    text-align: right;
+    color: black;
+}
+.margin-down{
+    margin-bottom: 40px;
+}
+.alignment-cat{
+    text-align: center;
+}
+.line-up{
+    height: 10px;
+    width: 150px;
+    border-radius: 6px;
+    background-image: linear-gradient(45deg, rgb(251, 255, 22), rgb(255, 102, 0));
+    margin: 0 auto;
+}
+.box{
+    box-shadow: 5px 5px 15px grey;
+    padding: 45px 60px;
+    border-radius: 0px 10px 0px 30px;
+    margin-right: 20px;
+    margin-top: 60px;
+}
+
+/* CSS cho phần footer */
+/* CSS cho phần footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    clear: both; /* Đảm bảo footer hiển thị sau các phần tử float */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #f44336;
+    text-decoration: none;
+}
+
+.col-md-4 {
+    text-align: center;
+}
+
+.col-md-4 h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f44336;
+}
+
+.col-md-4 p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.social-icons {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons li a:hover {
+    color: #f44336;
+}
+.bannner img{
+    width: 70%;
+    margin-left: 230px;
+}
+/*/
