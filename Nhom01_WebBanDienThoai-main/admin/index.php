@@ -136,7 +136,7 @@
             delete_taikhoan($_GET['id']);
           }
           $listtk = loadall_taikhoan();
-          include './taikhoan/list.php';
+          include './khachhang/list.php';
           break;
           
         case 'chitietdh':
