@@ -1,43 +1,78 @@
-    <!-- Start main wrapper -->
-    <main class="main-wrapper">
-      <div class="main-content">
-        <!-- start breadcrumb -->
-        <div class="page-breadcrumb">
-          <div class="breadcrumb-title">Thêm mới loại hàng</div>
-        </div>
-        <!-- end breadcrumb -->
-        <div class="filter">
-          <div class="col-auto">
-            <div class="btn-ds">
-              <a href="index.php?act=listdm">
-                <button class="btn-primary">
-                  Danh sách loại hàng
-                </button>
-              </a>
-            </div>
+<!-- Start main wrapper -->
+<main class="main-wrapper">
+  <div class="main-content">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active fw-bold" aria-current="page">
+          Thêm mới loại hàng
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Nút danh sách -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="fw-bold mb-0">Thêm mới danh mục</h4>
+
+      <a href="index.php?act=listdm" class="btn btn-secondary">
+        <i class="bi bi-list-ul"></i> Danh sách loại hàng
+      </a>
+    </div>
+
+    <!-- Form thêm -->
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+
+        <!-- GIỮ NGUYÊN LOGIC -->
+        <form action="index.php?act=adddm" method="post">
+
+          <!-- Mã loại hàng (disabled) -->
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Mã loại hàng</label>
+            <input type="text" class="form-control" disabled placeholder="Auto">
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <form action="index.php?act=adddm" method="post">
-              <div class="mb-4">
-                <h5 class="mb-3">Mã loại hàng</h5>
-                <input type="text" name="" id="" class="form-control" disabled >
-              </div>
-              <div class="mb-4 dm">
-                <h5 class="mb-3">Danh mục loại hàng</h5>
-                <input type="text" name="name" id="" class="form-control" placeholder="Nhập tên danh mục..." required >
-              </div>
-              <div class="mb-4">
-                <input type="submit" value="Lưu lại" name="luulai" class="success">
-                <input type="reset" value="Hủy bỏ" class="danger">
-              </div>
-              <?php
-                if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
-              ?>
-            </form>
+
+          <!-- Danh mục loại hàng -->
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Danh mục loại hàng</label>
+            <input 
+              type="text" 
+              name="name" 
+              class="form-control" 
+              placeholder="Nhập tên danh mục..." 
+              required
+            >
           </div>
-        </div>
+
+          <!-- Buttons -->
+          <div class="mt-4 d-flex gap-2">
+            <input 
+              type="submit" 
+              value="Lưu lại" 
+              name="luulai" 
+              class="btn btn-success px-4"
+            >
+
+            <input 
+              type="reset" 
+              value="Hủy bỏ" 
+              class="btn btn-outline-danger px-4"
+            >
+          </div>
+
+          <!-- Thông báo -->
+          <div class="mt-3 text-danger fw-semibold">
+            <?php
+              if(isset($thongbao) && ($thongbao!="")) echo $thongbao;
+            ?>
+          </div>
+
+        </form>
+
       </div>
-    </main>
-    <!-- End main wrapper -->
+    </div>
+
+  </div>
+</main>
+<!-- End main wrapper -->

@@ -1,87 +1,63 @@
-<aside class="sidebar-wrapper">
-      <div class="simplebar-wrapper">
-        <div class="simplebar-mask">
-          <div class="simplebar-offset">
-            <div class="simplebar-content-wrapper">
-              <div class="simplebar-content" style="padding: 0px">
-                <div class="sidebar-header">
-                  <div class="logo-icon">
-                    <img src="./images/logo.png" alt="" />
-                  </div>
-                </div>
-                <div class="sidebar-nav">
-                  <ul class="metismenu">
-                    <li>
-                      <a href="index.php?act" class="has-arrow">
-                        <div class="parent-icon">
-                          <i class="bi bi-speedometer"></i>
-                        </div>
-                        <div class="menu-title">Bảng điều khiển</div>
-                      </a>
-                    </li>
-                    <li class="menu-label">Quản lý</li>
-                    <li>
-                      <a href="index.php?act=khachhang" class="has-arrow">
-                        <div class="child-icon">
-                          <i class="bi bi-people"></i>
-                        </div>
-                        <div class="menu-title">Khách hàng</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="index.php?act=adddm" class="has-arrow">
-                        <div class="child-icon">
-                          <i class="bi bi-grid-3x3-gap"></i>
-                        </div>
-                        <div class="menu-title">Danh mục</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="index.php?act=addsp" class="has-arrow">
-                        <div class="child-icon">
-                        <i class="bi bi-tag"></i>
-                        </div>
-                        <div class="menu-title">Sản phẩm</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="index.php?act=listdh" class="has-arrow">
-                        <div class="child-icon">
-                        <i class="bi bi-cart3"></i>
-                        </div>
-                        <div class="menu-title">Đơn hàng</div>
-                      </a>
-                    </li>
-                    <li class="menu-label">PAGES</li>
-                    <li>
-                      <a href="index.php?act" class="has-arrow">
-                        <div class="child-icon">
-                          <i class="bi bi-telephone"></i>
-                        </div>
-                        <div class="menu-title">Liên hệ</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" class="has-arrow">
-                        <div class="child-icon">
-                          <i class="bi bi-gear"></i>
-                        </div>
-                        <div class="menu-title">Cài đặt hệ thống</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="index.php?act=thoat" class="has-arrow">
-                        <div class="child-icon">
-                          <i class="bi bi-box-arrow-right"></i>
-                        </div>
-                        <div class="menu-title">Đăng xuất</div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="d-flex">
+
+    <aside class="sidebar bg-white shadow-sm">
+
+      <ul class="list-unstyled mt-4">
+
+        <li class="sidebar-title">DASHBOARD</li>
+
+        <li>
+          <a href="index.php?act" class="sidebar-link">
+            <i class="bi bi-speedometer2"></i> Bảng điều khiển
+          </a>
+        </li>
+
+        <li class="sidebar-title">QUẢN LÝ</li>
+
+        <li>
+          <a href="index.php?act=khachhang" class="sidebar-link">
+            <i class="bi bi-people"></i> Khách hàng
+          </a>
+        </li>
+
+        <li>
+          <a href="index.php?act=adddm" class="sidebar-link">
+            <i class="bi bi-grid"></i> Danh mục
+          </a>
+        </li>
+
+        <li>
+          <a href="index.php?act=addsp" class="sidebar-link">
+            <i class="bi bi-tag"></i> Sản phẩm
+          </a>
+        </li>
+
+        <li>
+          <a href="index.php?act=listdh" class="sidebar-link">
+            <i class="bi bi-cart3"></i> Đơn hàng
+          </a>
+        </li>
+
+        <li class="sidebar-title">HỆ THỐNG</li>
+
+        <li>
+          <a href="#" class="sidebar-link">
+            <i class="bi bi-telephone"></i> Liên hệ
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="sidebar-link">
+            <i class="bi bi-gear-wide-connected"></i> Cài đặt hệ thống
+          </a>
+        </li>
+
+        <li>
+          <a href="index.php?act=thoat" class="sidebar-link text-danger">
+            <i class="bi bi-box-arrow-right"></i> Đăng xuất
+          </a>
+        </li>
+
+      </ul>
+
     </aside>
