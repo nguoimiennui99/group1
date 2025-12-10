@@ -107,42 +107,8 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 /*chitiet*/
-.product-detail1 {
-    display: flex;
-    align-items: flex-start; 
-    margin-top: 20px; 
-}
 
 
-.product-detail1 span {
-      color: black;
-      font-size: 25px;
-      display: flex;
-      font-weight: bold;
-}
-.product-detail1 .spct {
-    margin-right: 20px; 
-}
-.spct img {
-    width: 100%;
-}
-.product-detail1 img {
-    max-width: 100%; 
-    height: auto; 
-}
-
-.product-detail1 .product-info {
-    flex-grow: 1; 
-}
-
-.product-detail1 .product-info span {
-    display: block; 
-    margin-bottom: 10px; 
-}
-
-.product-detail1 .product-info span:first-child {
-    font-weight: bold; 
-}
 /*danhgia*/
 
 div.stars {
@@ -301,4 +267,5 @@ td img {
 .text-right {
     text-align: right;
 }
+
 /*****/
