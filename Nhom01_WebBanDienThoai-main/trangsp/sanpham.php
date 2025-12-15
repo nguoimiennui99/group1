@@ -29,51 +29,34 @@
 
         /* Product card */
         .product-card {
-            border: 1px solid #eee;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: 0.2s;
-            background: #fff;
-        }
-        .product-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-        }
-        .product-img {
-            height: 200px;
-            object-fit: cover;
-            width: 100%;
-            background: #fafafa;
-        }
-        .product-title {
-            font-size: 14px;
-            font-weight: 500;
-            color: #333;
-            height: 40px;
-        }
-        .product-price {
-            font-size: 18px;
-            font-weight: bold;
-            color: #ff3d00;
-        }
-        .tag-sale {
-            position: absolute;
-            background: #ff3d00;
-            color: #fff;
-            padding: 3px 6px;
-            font-size: 12px;
-            top: 10px;
-            right: 10px;
-            border-radius: 4px;
-        }
-        .tag-hot {
-            font-size: 12px;
-            padding: 3px 5px;
-            background: #ff9800;
-            color: #fff;
-            border-radius: 4px;
-        }
+    background: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.2s;
+    height: 100%;
+}
+.product-card:hover {
+    transform: translateY(-3px);
+}
 
+.product-card img {
+    max-height: 180px;
+    object-fit: contain;
+}
+
+.product-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product-price {
+    color: #d0021b;
+    font-weight: bold;
+}
         /* Sort bar */
         .sort-bar button {
             border: 1px solid #ddd;
@@ -86,22 +69,43 @@
             color: #fff;
             border-color: #ff5722;
         }
+ .breadcrumb-bar {
+
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.breadcrumb-bar a {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.breadcrumb-bar a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-bar span {
+    margin: 0 5px;
+    color: #000;
+}
+
     </style>
 </head>
 
 <body class="bg-light">
 
 <div class="container py-4">
+    <div class="breadcrumb-bar mb-3">
+    <a href="index.php?act=view/home"><i class="fa fa-house nav-icon"></i>Trang Chủ</a>
+    <span>></span>
+    <a href="index.php?act=sanpham">Điện Thoại</a>
+</div>
 
-    <!-- Breadcrumb -->
-    <div class="mb-3">
-        <a href="index.php?act=view/home" class="text-decoration-none">Trang Chủ</a> /
-        <a href="index.php?act=sanpham" class="text-decoration-none">Điện Thoại</a>
-    </div>
-
+     <hr>
     <div class="row">
 
-        <!-- SIDEBAR -->
         <aside class="col-md-3 mb-4">
             <div class="sidebar-box">
                 <h5><i class="fa-solid fa-list"></i> Tất Cả Danh Mục</h5>
@@ -115,19 +119,7 @@
                 </ul>
             </div>
         </aside>
-
-        <!-- MAIN CONTENT -->
         <div class="col-md-9">
-
-            <!-- SORT BAR -->
-            <div class="sort-bar mb-3 d-flex gap-2">
-                <button class="active">Phổ Biến</button>
-                <button>Mới Nhất</button>
-                <button>Bán Chạy</button>
-                <button>Giá <i class="fa-solid fa-chevron-down"></i></button>
-            </div>
-
-            <!-- PRODUCT GRID -->
             <div class="row g-3">
                 <?php foreach ($dssp as $sp): ?>
                     <div class="col-md-4 col-6">
