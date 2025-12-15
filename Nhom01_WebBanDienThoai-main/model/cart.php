@@ -1,15 +1,24 @@
 <?php
 function insert_cart($iduser, $id, $img, $name, $price, $soluong, $thanhtien, $idbill) {
-    $sql_check = "SELECT * FROM cart WHERE iduser = $iduser AND id = $id AND idbill = 0";
+
+    $sql_check = "SELECT * FROM cart 
+                  WHERE iduser = $iduser AND name = '$name' AND idbill = 0";
     $sl = pdo_query_one($sql_check);
 
     if ($sl) {
         $sl_moi = $sl['soluong'] + $soluong;
         $thanhtien_moi = $price * $sl_moi;
-        $sql_update = "UPDATE cart SET soluong = $sl_moi, thanhtien = $thanhtien_moi WHERE id = " . $sl['id'];
+
+        $sql_update = "UPDATE cart 
+                       SET soluong = $sl_moi, thanhtien = $thanhtien_moi 
+                       WHERE id = " . $sl['id'];
         pdo_execute($sql_update);
+
     } else {
-        $sql_insert = "INSERT INTO cart (iduser, id, img, name, price, soluong, thanhtien, idbill) VALUES ('$iduser', '$id', '$img', '$name', '$price', $soluong, '$thanhtien', '$idbill')";
+        $sql_insert = "INSERT INTO cart 
+            (iduser, idpro, img, name, price, soluong, thanhtien, idbill)
+            VALUES ($iduser, $id, '$img', '$name', $price, $soluong, $thanhtien, $idbill)";
+
         pdo_execute($sql_insert);
     }
 }

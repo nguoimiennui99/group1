@@ -105,9 +105,8 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
         // ===============================
         case 'addtocart':
-            if (isset($_SESSION['user'])) {
-                $iduser = $_SESSION['user']['id'];
-
+            if (isset($_SESSION['user']) && isset($_SESSION['user']['id'])) {
+                $iduser = intval($_SESSION['user']['id']);
                 $id      = $_POST['id'];
                 $img     = $_POST['img'];
                 $name    = $_POST['name'];
@@ -223,10 +222,16 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 if ($idbill) {
                     $cartItems = load_cart_by_user($iduser);
                     foreach ($cartItems as $item) {
+                        $sp = pdo_query_one(
+                            "SELECT id FROM sanpham WHERE name = ?",
+                            $item['name']
+                        );
+
+                        $idpro = $sp ? $sp['id'] : 0;
                         insert_bill_detail(
                             $iduser,
                             $idbill,
-                            $item['id'],
+                            $idpro,
                             $item['img'],
                             $item['name'],
                             $item['soluong'],
@@ -244,7 +249,8 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                         'sdt' => $sdt,
                         'diachi' => $diachi,
                         'pttt' => $pttt,
-                        'trangthai' => $trangthai
+                        'trangthai' => $trangthai,
+                        'ngaydathang' => $ngaydathang
                     ];
 
                     header('Location: index.php?act=billconfirm');
