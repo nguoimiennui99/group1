@@ -138,7 +138,14 @@
           $listtk = loadall_taikhoan();
           include './khachhang/list.php';
           break;
-          
+          case 'logout':
+    session_start();
+    session_unset();
+    session_destroy();
+
+    header("Location: ../index.php");
+    exit();
+
         case 'chitietdh':
           if (isset($_GET['id']) && $_GET['id'] > 0) {
               $suabill = loadOne_bill($_GET['id']);

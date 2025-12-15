@@ -53,9 +53,10 @@
         </li>
 
         <li>
-          <a href="index.php?act=thoat" class="sidebar-link text-danger">
+          <a href="index.php?act=logout" class="sidebar-link text-danger">
             <i class="bi bi-box-arrow-right"></i> Đăng xuất
           </a>
+
         </li>
 
       </ul>
